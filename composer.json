@@ -1,0 +1,32 @@
+{
+  "name": "azusdex/bprofit-test",
+  "description": "HomeWork",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Konstantin Khotski",
+      "email": "konstantine.khotski@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "App/"
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "post-install-cmd": [
+      "@migration"
+    ],
+    "migration": [
+      "App\\Lib\\Migration::insertTables"
+    ]
+  },
+  "require": {
+    "ext-pdo": "*",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*"
+  },
+  "require-dev": {}
+}
